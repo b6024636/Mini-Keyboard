@@ -35,9 +35,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -55,6 +55,9 @@
             this.globalListBox = new System.Windows.Forms.ListBox();
             this.listBox8 = new System.Windows.Forms.ListBox();
             this.listBox9 = new System.Windows.Forms.ListBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.listBox6 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // notepadTxt
@@ -111,14 +114,15 @@
             this.button3.Text = "3\r\nW X Y Z";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // button6
             // 
-            this.button4.Location = new System.Drawing.Point(390, 414);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(53, 48);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "4\r\nM N O";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button6.Location = new System.Drawing.Point(390, 414);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(53, 48);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "6\r\nM N O";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -128,15 +132,17 @@
             this.button5.TabIndex = 7;
             this.button5.Text = "5\r\nJ K L";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // button4
             // 
-            this.button6.Location = new System.Drawing.Point(272, 414);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(53, 48);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "6\r\nG H I";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button4.Location = new System.Drawing.Point(272, 414);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(53, 48);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "4\r\nG H I";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button7
             // 
@@ -305,11 +311,62 @@
             this.listBox9.Size = new System.Drawing.Size(51, 17);
             this.listBox9.TabIndex = 24;
             // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Items.AddRange(new object[] {
+            "g",
+            "h",
+            "i",
+            "6",
+            "G",
+            "H",
+            "I"});
+            this.listBox4.Location = new System.Drawing.Point(552, 409);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(36, 17);
+            this.listBox4.TabIndex = 25;
+            // 
+            // listBox5
+            // 
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.Items.AddRange(new object[] {
+            "j",
+            "k",
+            "l",
+            "5",
+            "J",
+            "K",
+            "L"});
+            this.listBox5.Location = new System.Drawing.Point(539, 447);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(74, 30);
+            this.listBox5.TabIndex = 26;
+            // 
+            // listBox6
+            // 
+            this.listBox6.FormattingEnabled = true;
+            this.listBox6.Items.AddRange(new object[] {
+            "m",
+            "n",
+            "o",
+            "6",
+            "M",
+            "N",
+            "O"});
+            this.listBox6.Location = new System.Drawing.Point(557, 492);
+            this.listBox6.Name = "listBox6";
+            this.listBox6.Size = new System.Drawing.Size(86, 43);
+            this.listBox6.TabIndex = 27;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 591);
+            this.Controls.Add(this.listBox6);
+            this.Controls.Add(this.listBox5);
+            this.Controls.Add(this.listBox4);
             this.Controls.Add(this.listBox9);
             this.Controls.Add(this.listBox8);
             this.Controls.Add(this.globalListBox);
@@ -326,9 +383,9 @@
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -350,9 +407,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
@@ -370,6 +427,9 @@
         private System.Windows.Forms.ListBox globalListBox;
         private System.Windows.Forms.ListBox listBox8;
         private System.Windows.Forms.ListBox listBox9;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.ListBox listBox6;
     }
 }
 

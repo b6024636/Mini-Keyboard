@@ -134,8 +134,88 @@ namespace Mini_Keyboard
             }
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (modePrediction == false)
+            {
+                globalListBox.Items.Clear();
+                for (int i = 0; i < listBox4.Items.Count; i++)
+                {
+                    globalListBox.Items.Add(listBox4.Items[i].ToString());
+                }
+                if (timer1.Enabled == false)
+                {
+                    timer1.Enabled = true;
+                    index++;
+                }
+                else
+                {
+                    timerRestart();
+                    index++;
+                    if (index == listBox4.Items.Count - 1)
+                    {
+                        index = 0;
+                    }
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (modePrediction == false)
+            {
+                globalListBox.Items.Clear();
+                for (int i = 0; i < listBox5.Items.Count; i++)
+                {
+                    globalListBox.Items.Add(listBox5.Items[i].ToString());
+                }
+                if (timer1.Enabled == false)
+                {
+                    timer1.Enabled = true;
+                    index++;
+                }
+                else
+                {
+                    timerRestart();
+                    index++;
+                    if (index == listBox5.Items.Count - 1)
+                    {
+                        index = 0;
+                    }
+                }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (modePrediction == false)
+            {
+                globalListBox.Items.Clear();
+                for (int i = 0; i < listBox6.Items.Count; i++)
+                {
+                    globalListBox.Items.Add(listBox6.Items[i].ToString());
+                }
+                if (timer1.Enabled == false)
+                {
+                    timer1.Enabled = true;
+                    index++;
+                }
+                else
+                {
+                    timerRestart();
+                    index++;
+                    if (index == listBox6.Items.Count - 1)
+                    {
+                        index = 0;
+                    }
+                }
+            }
+        }
 
 
 
-    }
+
+
+
+    } //Class
 }
