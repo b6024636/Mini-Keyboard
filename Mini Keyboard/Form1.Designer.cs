@@ -61,6 +61,9 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listBox7 = new System.Windows.Forms.ListBox();
+            this.listBox10 = new System.Windows.Forms.ListBox();
+            this.listBox11 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // notepadTxt
@@ -159,6 +162,7 @@
             this.button7.TabIndex = 9;
             this.button7.Text = "7\r\n.,\"\r\n";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -198,6 +202,7 @@
             this.button10.TabIndex = 13;
             this.button10.Text = "*-_";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -207,6 +212,7 @@
             this.button11.TabIndex = 14;
             this.button11.Text = "#\r\n0.00";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // prevButton
             // 
@@ -313,7 +319,7 @@
             "D",
             "E",
             "F"});
-            this.listBox9.Location = new System.Drawing.Point(537, 368);
+            this.listBox9.Location = new System.Drawing.Point(539, 308);
             this.listBox9.Name = "listBox9";
             this.listBox9.Size = new System.Drawing.Size(51, 17);
             this.listBox9.TabIndex = 24;
@@ -329,7 +335,7 @@
             "G",
             "H",
             "I"});
-            this.listBox4.Location = new System.Drawing.Point(552, 409);
+            this.listBox4.Location = new System.Drawing.Point(537, 318);
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(36, 17);
             this.listBox4.TabIndex = 25;
@@ -345,9 +351,9 @@
             "J",
             "K",
             "L"});
-            this.listBox5.Location = new System.Drawing.Point(539, 447);
+            this.listBox5.Location = new System.Drawing.Point(539, 318);
             this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(74, 30);
+            this.listBox5.Size = new System.Drawing.Size(34, 17);
             this.listBox5.TabIndex = 26;
             // 
             // listBox6
@@ -361,9 +367,9 @@
             "M",
             "N",
             "O"});
-            this.listBox6.Location = new System.Drawing.Point(557, 492);
+            this.listBox6.Location = new System.Drawing.Point(541, 318);
             this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(86, 43);
+            this.listBox6.Size = new System.Drawing.Size(32, 17);
             this.listBox6.TabIndex = 27;
             // 
             // listBox1
@@ -379,9 +385,9 @@
             "Q",
             "R",
             "S"});
-            this.listBox1.Location = new System.Drawing.Point(611, 318);
+            this.listBox1.Location = new System.Drawing.Point(541, 308);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(68, 56);
+            this.listBox1.Size = new System.Drawing.Size(39, 17);
             this.listBox1.TabIndex = 28;
             // 
             // listBox2
@@ -395,9 +401,9 @@
             "T",
             "U",
             "V"});
-            this.listBox2.Location = new System.Drawing.Point(648, 392);
+            this.listBox2.Location = new System.Drawing.Point(542, 318);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(102, 69);
+            this.listBox2.Size = new System.Drawing.Size(38, 17);
             this.listBox2.TabIndex = 29;
             // 
             // listBox3
@@ -413,16 +419,59 @@
             "X",
             "Y",
             "Z"});
-            this.listBox3.Location = new System.Drawing.Point(678, 500);
+            this.listBox3.Location = new System.Drawing.Point(557, 321);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(71, 56);
+            this.listBox3.Size = new System.Drawing.Size(10, 4);
             this.listBox3.TabIndex = 30;
+            // 
+            // listBox7
+            // 
+            this.listBox7.FormattingEnabled = true;
+            this.listBox7.Items.AddRange(new object[] {
+            ".",
+            "~",
+            "\"",
+            "7",
+            "\'",
+            ":",
+            ";"});
+            this.listBox7.Location = new System.Drawing.Point(541, 318);
+            this.listBox7.Name = "listBox7";
+            this.listBox7.Size = new System.Drawing.Size(48, 17);
+            this.listBox7.TabIndex = 31;
+            // 
+            // listBox10
+            // 
+            this.listBox10.FormattingEnabled = true;
+            this.listBox10.Items.AddRange(new object[] {
+            "*",
+            "-",
+            "_"});
+            this.listBox10.Location = new System.Drawing.Point(549, 317);
+            this.listBox10.Name = "listBox10";
+            this.listBox10.Size = new System.Drawing.Size(39, 17);
+            this.listBox10.TabIndex = 32;
+            // 
+            // listBox11
+            // 
+            this.listBox11.FormattingEnabled = true;
+            this.listBox11.Items.AddRange(new object[] {
+            "#",
+            "-",
+            "_"});
+            this.listBox11.Location = new System.Drawing.Point(539, 317);
+            this.listBox11.Name = "listBox11";
+            this.listBox11.Size = new System.Drawing.Size(52, 17);
+            this.listBox11.TabIndex = 33;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 591);
+            this.Controls.Add(this.listBox11);
+            this.Controls.Add(this.listBox10);
+            this.Controls.Add(this.listBox7);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
@@ -497,6 +546,9 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox listBox7;
+        private System.Windows.Forms.ListBox listBox10;
+        private System.Windows.Forms.ListBox listBox11;
     }
 }
 
