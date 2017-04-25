@@ -52,6 +52,9 @@
             this.button16 = new System.Windows.Forms.Button();
             this.enterButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.globalListBox = new System.Windows.Forms.ListBox();
+            this.listBox8 = new System.Windows.Forms.ListBox();
+            this.listBox9 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // notepadTxt
@@ -152,6 +155,7 @@
             this.button8.TabIndex = 10;
             this.button8.Text = "8\r\nA B C";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -161,6 +165,7 @@
             this.button9.TabIndex = 11;
             this.button9.Text = "9\r\nD E F";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button0
             // 
@@ -170,6 +175,7 @@
             this.button0.TabIndex = 12;
             this.button0.Text = "000\r\n[ _ ]";
             this.button0.UseVisualStyleBackColor = true;
+            this.button0.Click += new System.EventHandler(this.button0_Click);
             // 
             // button10
             // 
@@ -252,16 +258,61 @@
             this.enterButton.TabIndex = 21;
             this.enterButton.Text = "Enter";
             this.enterButton.UseVisualStyleBackColor = true;
+            this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.onTick);
+            // 
+            // globalListBox
+            // 
+            this.globalListBox.FormattingEnabled = true;
+            this.globalListBox.Location = new System.Drawing.Point(36, 287);
+            this.globalListBox.Name = "globalListBox";
+            this.globalListBox.Size = new System.Drawing.Size(82, 108);
+            this.globalListBox.TabIndex = 22;
+            // 
+            // listBox8
+            // 
+            this.listBox8.FormattingEnabled = true;
+            this.listBox8.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "c",
+            "8",
+            "A",
+            "B",
+            "C"});
+            this.listBox8.Location = new System.Drawing.Point(537, 308);
+            this.listBox8.Name = "listBox8";
+            this.listBox8.Size = new System.Drawing.Size(52, 30);
+            this.listBox8.TabIndex = 23;
+            // 
+            // listBox9
+            // 
+            this.listBox9.FormattingEnabled = true;
+            this.listBox9.Items.AddRange(new object[] {
+            "d",
+            "e",
+            "f",
+            "9",
+            "D",
+            "E",
+            "F"});
+            this.listBox9.Location = new System.Drawing.Point(537, 368);
+            this.listBox9.Name = "listBox9";
+            this.listBox9.Size = new System.Drawing.Size(51, 17);
+            this.listBox9.TabIndex = 24;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 591);
+            this.Controls.Add(this.listBox9);
+            this.Controls.Add(this.listBox8);
+            this.Controls.Add(this.globalListBox);
             this.Controls.Add(this.enterButton);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button14);
@@ -316,6 +367,9 @@
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button enterButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ListBox globalListBox;
+        private System.Windows.Forms.ListBox listBox8;
+        private System.Windows.Forms.ListBox listBox9;
     }
 }
 
