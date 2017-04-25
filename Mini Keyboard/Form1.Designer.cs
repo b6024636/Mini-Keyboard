@@ -59,6 +59,8 @@
             this.listBox5 = new System.Windows.Forms.ListBox();
             this.listBox6 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // notepadTxt
@@ -96,6 +98,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "1\r\nP Q R S";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -105,6 +108,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "2\r\nT U V";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -115,6 +119,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "3\r\nW X Y Z";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button6
             // 
@@ -379,11 +384,47 @@
             this.listBox1.Size = new System.Drawing.Size(68, 56);
             this.listBox1.TabIndex = 28;
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Items.AddRange(new object[] {
+            "t",
+            "u",
+            "v",
+            "2",
+            "T",
+            "U",
+            "V"});
+            this.listBox2.Location = new System.Drawing.Point(648, 392);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(102, 69);
+            this.listBox2.TabIndex = 29;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Items.AddRange(new object[] {
+            "w",
+            "x",
+            "y",
+            "z",
+            "3",
+            "W",
+            "X",
+            "Y",
+            "Z"});
+            this.listBox3.Location = new System.Drawing.Point(678, 500);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(71, 56);
+            this.listBox3.TabIndex = 30;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 591);
+            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.listBox6);
             this.Controls.Add(this.listBox5);
@@ -454,6 +495,8 @@
         private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.ListBox listBox6;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox3;
     }
 }
 
