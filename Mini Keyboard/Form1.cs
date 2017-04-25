@@ -72,6 +72,7 @@ namespace Mini_Keyboard
 
         private void timerRestart()
         {
+            //Restarts timer
             timer1.Stop();
             timer1.Start();
         }

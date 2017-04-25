@@ -58,6 +58,7 @@
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.listBox5 = new System.Windows.Forms.ListBox();
             this.listBox6 = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // notepadTxt
@@ -73,6 +74,7 @@
             // 
             this.wordBuilderTextBox.Location = new System.Drawing.Point(271, 271);
             this.wordBuilderTextBox.Name = "wordBuilderTextBox";
+            this.wordBuilderTextBox.ReadOnly = true;
             this.wordBuilderTextBox.Size = new System.Drawing.Size(190, 20);
             this.wordBuilderTextBox.TabIndex = 1;
             // 
@@ -359,11 +361,30 @@
             this.listBox6.Size = new System.Drawing.Size(86, 43);
             this.listBox6.TabIndex = 27;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "p",
+            "q",
+            "r",
+            "s",
+            "1",
+            "P",
+            "Q",
+            "R",
+            "S"});
+            this.listBox1.Location = new System.Drawing.Point(611, 318);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(68, 56);
+            this.listBox1.TabIndex = 28;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 591);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.listBox6);
             this.Controls.Add(this.listBox5);
             this.Controls.Add(this.listBox4);
@@ -392,7 +413,9 @@
             this.Controls.Add(this.modeStatusLbl);
             this.Controls.Add(this.wordBuilderTextBox);
             this.Controls.Add(this.notepadTxt);
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Minikeyboard";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -430,6 +453,7 @@
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.ListBox listBox6;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
