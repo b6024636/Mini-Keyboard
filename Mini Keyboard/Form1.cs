@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MyDialogs;
+
 namespace Mini_Keyboard
 {
     public partial class Form1 : Form
@@ -15,6 +17,16 @@ namespace Mini_Keyboard
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void buttonMode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void onTick(object sender, EventArgs e)
+        {
+
         }
     }
 }
