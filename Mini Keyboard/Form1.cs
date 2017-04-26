@@ -411,7 +411,7 @@ namespace Mini_Keyboard
 
                lineOfText = inputStream.ReadLine();
 
-               while(notepadTxt.Text != null)
+               while(inputStream.ReadLine() != null)
                {
                    notepadTxt.AppendText(lineOfText + Environment.NewLine);
                    lineOfText = inputStream.ReadLine();
