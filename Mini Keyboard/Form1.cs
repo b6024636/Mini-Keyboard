@@ -27,6 +27,8 @@ namespace Mini_Keyboard
         bool[] buttonPresssed = new bool[19];
 
         string builtWord;
+        //Adds a variable for opening a file dialog
+        OpenFileDialog ofd = new OpenFileDialog();
 
         public Form1()
         {
@@ -394,6 +396,16 @@ namespace Mini_Keyboard
 
             //Closes the file
             outputStream.Close();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ofd.Filter = "txt|*.txt";
+           //Only runs the code if Ok is selected
+           if (ofd.ShowDialog() == DialogResult.OK)
+           {
+               notepadTxt.Text = ofd.FileName;
+           }
         }
 
 
