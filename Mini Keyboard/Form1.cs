@@ -400,11 +400,24 @@ namespace Mini_Keyboard
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string lineOfText;
+            //Ensures the user can only open .txt files
             ofd.Filter = "txt|*.txt";
            //Only runs the code if Ok is selected
            if (ofd.ShowDialog() == DialogResult.OK)
            {
-               notepadTxt.Text = ofd.FileName;
+               //Reads the selected file
+               StreamReader inputStream = File.OpenText(ofd.FileName);
+
+               lineOfText = inputStream.ReadLine();
+
+               while(notepadTxt.Text != null)
+               {
+                   notepadTxt.AppendText(lineOfText + Environment.NewLine);
+                   lineOfText = inputStream.ReadLine();
+               }
+               //Closes the stream
+               inputStream.Close();
            }
         }
 
