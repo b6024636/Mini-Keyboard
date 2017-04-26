@@ -441,6 +441,7 @@ namespace Mini_Keyboard
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Closes the program
             Application.Exit();
         }
 
