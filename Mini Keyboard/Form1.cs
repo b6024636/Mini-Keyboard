@@ -27,8 +27,10 @@ namespace Mini_Keyboard
         bool[] buttonPresssed = new bool[19];
 
         string builtWord;
-        //Adds a variable for opening a file dialog
+        //Adds variables for opening and saving file dialog
         OpenFileDialog ofd = new OpenFileDialog();
+
+        SaveFileDialog sfd = new SaveFileDialog();
 
         public Form1()
         {
@@ -382,7 +384,20 @@ namespace Mini_Keyboard
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+            sfd.Filter = "Text File|*.txt";
+            //If save is clicked
+            if (sfd.ShowDialog() == DialogResult.OK)
+            { 
+                //Makes sure the file name isn't left blank
+                if(sfd.FileName != "")
+                {
+                    //Writes the text in the notepad to a file
+                    using(StreamWriter sw = new StreamWriter(sfd.FileName))
+                    {
+                        sw.Write(notepadTxt.Text);
+                    }
+                }
+            }
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -400,25 +415,33 @@ namespace Mini_Keyboard
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Clears the current text
+            notepadTxt.Clear();
             string lineOfText;
             //Ensures the user can only open .txt files
-            ofd.Filter = "txt|*.txt";
+            ofd.Filter = "Text File|*.txt";
            //Only runs the code if Ok is selected
            if (ofd.ShowDialog() == DialogResult.OK)
            {
                //Reads the selected file
                StreamReader inputStream = File.OpenText(ofd.FileName);
 
-               lineOfText = inputStream.ReadLine();
+               //lineOfText = inputStream.ReadLine();
 
                while(inputStream.ReadLine() != null)
                {
-                   notepadTxt.AppendText(lineOfText + Environment.NewLine);
                    lineOfText = inputStream.ReadLine();
+                   notepadTxt.AppendText(lineOfText + Environment.NewLine);
+                   
                }
                //Closes the stream
                inputStream.Close();
            }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
 
