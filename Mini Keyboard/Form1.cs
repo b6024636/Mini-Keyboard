@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.IO;
+
 using MyDialogs;
 
 namespace Mini_Keyboard
@@ -376,6 +378,23 @@ namespace Mini_Keyboard
             timer1.Interval = intervalRequired;
         }
 
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // This gets us the location where the Application is being
+            string applicationPath = Directory.GetCurrentDirectory() + "\\";
+
+            // Creates a file at the application path called Notepad.txt
+            StreamWriter outputStream = File.CreateText(applicationPath + "Notepad.txt");
+            outputStream.WriteLine(notepadTxt.Text);
+
+            //Closes the file
+            outputStream.Close();
+        }
 
 
 
@@ -383,5 +402,6 @@ namespace Mini_Keyboard
 
 
 
-    } //Class
+
+    } //End of Class
 }
