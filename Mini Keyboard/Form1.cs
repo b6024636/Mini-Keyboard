@@ -369,6 +369,13 @@ namespace Mini_Keyboard
             }
         }
 
+        private void configureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Allows the user to change the timer interval 
+            intervalRequired = Convert.ToInt32(My_Dialogs.InputBox("Please enter the delay value you require. 1000 is equal to 1 second delay. The delay is currently at " + intervalRequired));
+            timer1.Interval = intervalRequired;
+        }
+
 
 
 
