@@ -87,6 +87,7 @@ namespace Mini_Keyboard
         {
             if (modePrediction == false)
             {
+                //Adds the corresonding listbox content to the global list box through the for loop
                 globalListBox.Items.Clear();
                 for (int i = 0; i < listBox8.Items.Count; i++)
                 {
