@@ -532,10 +532,16 @@ namespace Mini_Keyboard
         private void loadDictionary()
         {
             string filePath = Directory.GetCurrentDirectory() + "\\";
-           
-            StreamWriter outputStream = File.CreateText(filePath + "Dictionary.txt");
-            outputStream.Close();
-               
+            
+            if(File.Exists(filePath + "Dictionary.txt"))
+            {
+              
+            }
+            else
+            {
+                StreamWriter outputStream = File.CreateText(filePath + "Dictionary.txt");
+                outputStream.Close();
+            }
             
         }
 
