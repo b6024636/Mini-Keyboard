@@ -126,7 +126,7 @@ namespace Mini_Keyboard
                         index = 0;
                     }
                 }
-
+                //Displays what the current index letter is
                 listBoxLetterLbl.Text = globalListBox.Items[index].ToString();
             }
         //End button
@@ -157,6 +157,7 @@ namespace Mini_Keyboard
                         index = 0;
                     }
                 }
+                listBoxLetterLbl.Text = globalListBox.Items[index].ToString();
             }
         }
 
@@ -185,6 +186,7 @@ namespace Mini_Keyboard
                         index = 0;
                     }
                 }
+                listBoxLetterLbl.Text = globalListBox.Items[index].ToString();
             }
         }
 
@@ -213,6 +215,7 @@ namespace Mini_Keyboard
                         index = 0;
                     }
                 }
+                listBoxLetterLbl.Text = globalListBox.Items[index].ToString();
             }
         }
 
@@ -241,6 +244,7 @@ namespace Mini_Keyboard
                         index = 0;
                     }
                 }
+                listBoxLetterLbl.Text = globalListBox.Items[index].ToString();
             }
         }
 
@@ -269,6 +273,7 @@ namespace Mini_Keyboard
                         index = 0;
                     }
                 }
+                listBoxLetterLbl.Text = globalListBox.Items[index].ToString();
             }
         }
 
@@ -297,6 +302,7 @@ namespace Mini_Keyboard
                         index = 0;
                     }
                 }
+                listBoxLetterLbl.Text = globalListBox.Items[index].ToString();
             }
         }
 
@@ -325,6 +331,7 @@ namespace Mini_Keyboard
                         index = 0;
                     }
                 }
+                listBoxLetterLbl.Text = globalListBox.Items[index].ToString();
             }
         }
 
@@ -353,6 +360,7 @@ namespace Mini_Keyboard
                         index = 0;
                     }
                 }
+                listBoxLetterLbl.Text = globalListBox.Items[index].ToString();
             }
         }
 
@@ -381,6 +389,7 @@ namespace Mini_Keyboard
                         index = 0;
                     }
                 }
+                listBoxLetterLbl.Text = globalListBox.Items[index].ToString();
             }
         }
 
@@ -409,6 +418,7 @@ namespace Mini_Keyboard
                         index = 0;
                     }
                 }
+                listBoxLetterLbl.Text = globalListBox.Items[index].ToString();
             }
         }
 
@@ -521,6 +531,18 @@ namespace Mini_Keyboard
 
         private void loadDictionary()
         {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Setup the time Between Presses for Next Character when same button withinTimer.Interval = intIntervalRequired;  
+            for (int whichButton = 0; whichButton <= 18; whichButton++)
+            {
+                buttonPresssed[whichButton] = false;
+            }
+
+             loadDictionary(); 
 
         }
 
