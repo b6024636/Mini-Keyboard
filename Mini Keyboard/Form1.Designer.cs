@@ -75,6 +75,7 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBoxLetterLbl = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -579,11 +580,20 @@
             this.configureToolStripMenuItem.Text = "Configure";
             this.configureToolStripMenuItem.Click += new System.EventHandler(this.configureToolStripMenuItem_Click);
             // 
+            // listBoxLetterLbl
+            // 
+            this.listBoxLetterLbl.AutoSize = true;
+            this.listBoxLetterLbl.Location = new System.Drawing.Point(83, 540);
+            this.listBoxLetterLbl.Name = "listBoxLetterLbl";
+            this.listBoxLetterLbl.Size = new System.Drawing.Size(0, 13);
+            this.listBoxLetterLbl.TabIndex = 35;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 591);
+            this.Controls.Add(this.listBoxLetterLbl);
             this.Controls.Add(this.listBox11);
             this.Controls.Add(this.listBox10);
             this.Controls.Add(this.listBox7);
@@ -679,6 +689,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configureToolStripMenuItem;
+        private System.Windows.Forms.Label listBoxLetterLbl;
     }
 }
 

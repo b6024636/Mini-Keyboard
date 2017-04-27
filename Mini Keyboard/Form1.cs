@@ -37,6 +37,8 @@ namespace Mini_Keyboard
         public Form1()
         {
             InitializeComponent();
+
+            
         }
 
         private void buttonMode_Click(object sender, EventArgs e)
@@ -60,6 +62,7 @@ namespace Mini_Keyboard
             //Disables the timer after 1 second
             timer1.Enabled = false;
             wordBuilderTextBox.AppendText(globalListBox.Items[index].ToString());
+            
             index = -1;
         }
 
@@ -85,6 +88,8 @@ namespace Mini_Keyboard
             //Restarts timer
             timer1.Stop();
             timer1.Start();
+
+       
         }
 
         //The code for each button is similar to eachother with only the listbox being changed depending on which button is pressed
@@ -116,11 +121,13 @@ namespace Mini_Keyboard
                     //Goes onto the next item
                     index++;
                     //Loops through the listBox
-                    if (index == listBox8.Items.Count - 1)
+                    if (index == listBox8.Items.Count)
                     {
                         index = 0;
                     }
                 }
+
+                listBoxLetterLbl.Text = globalListBox.Items[index].ToString();
             }
         //End button
         }
@@ -446,7 +453,7 @@ namespace Mini_Keyboard
             string applicationPath = Directory.GetCurrentDirectory() + "\\";
 
             // Creates a file at the application path called Notepad.txt
-            StreamWriter outputStream = File.CreateText(applicationPath + fileDialog);
+            StreamWriter outputStream = File.CreateText(applicationPath + "Text.txt");
             outputStream.WriteLine(notepadTxt.Text);
 
             //Closes the file
