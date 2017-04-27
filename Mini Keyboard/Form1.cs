@@ -83,6 +83,8 @@ namespace Mini_Keyboard
             timer1.Start();
         }
 
+        //The code for each button is similar to eachother with only the listbox being changed depending on which button is pressed
+
         private void button8_Click(object sender, EventArgs e)
         {
             if (modePrediction == false)
