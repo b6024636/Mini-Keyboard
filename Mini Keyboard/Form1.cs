@@ -445,6 +445,35 @@ namespace Mini_Keyboard
             Application.Exit();
         }
 
+        private void button16_Click(object sender, EventArgs e)
+        {
+            wordBuilderTextBox.Clear();
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(notepadTxt.Text != "")
+            {
+                sfd.Filter = "Text File|*.txt";
+                //If save is clicked
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    //Makes sure the file name isn't left blank
+                    if (sfd.FileName != "")
+                    {
+                        //Writes the text in the notepad to a file
+                        using (StreamWriter sw = new StreamWriter(sfd.FileName))
+                        {
+                            sw.Write(notepadTxt.Text);
+                        }
+                    }
+                }
+                //Clears the notepad and wordbuiler text boxes
+                notepadTxt.Clear();
+                wordBuilderTextBox.Clear();
+            }
+        }
+
 
 
 
