@@ -23,6 +23,7 @@ namespace Mini_Keyboard
 
         int intervalRequired = 1000;
 
+        bool requiresSaving = false;
         // Buttons. Identifies which button is being selected be the user. 
         bool[] buttonPresssed = new bool[19];
 
@@ -74,6 +75,8 @@ namespace Mini_Keyboard
             notepadTxt.AppendText(builtWord + " ");
             //Clears the textbox
             wordBuilderTextBox.Clear();
+            //This means that the file has been edited and therefore needs to be saved
+            requiresSaving = true;
         }
 
         private void timerRestart()
@@ -87,8 +90,11 @@ namespace Mini_Keyboard
 
         private void button8_Click(object sender, EventArgs e)
         {
+            
             if (modePrediction == false)
             {
+                buttonPresssed[8] = true;
+
                 //Adds the corresonding listbox content to the global list box through the for loop
                 globalListBox.Items.Clear();
                 for (int i = 0; i < listBox8.Items.Count; i++)
@@ -122,6 +128,8 @@ namespace Mini_Keyboard
         {
             if (modePrediction == false)
             {
+                buttonPresssed[9] = true;
+
                 globalListBox.Items.Clear();
                 for (int i = 0; i < listBox9.Items.Count; i++)
                 {
@@ -148,6 +156,8 @@ namespace Mini_Keyboard
         {
             if (modePrediction == false)
             {
+                buttonPresssed[4] = true;
+
                 globalListBox.Items.Clear();
                 for (int i = 0; i < listBox4.Items.Count; i++)
                 {
@@ -174,6 +184,8 @@ namespace Mini_Keyboard
         {
             if (modePrediction == false)
             {
+                buttonPresssed[5] = true;
+
                 globalListBox.Items.Clear();
                 for (int i = 0; i < listBox5.Items.Count; i++)
                 {
@@ -200,6 +212,8 @@ namespace Mini_Keyboard
         {
             if (modePrediction == false)
             {
+                buttonPresssed[6] = true;
+
                 globalListBox.Items.Clear();
                 for (int i = 0; i < listBox6.Items.Count; i++)
                 {
@@ -226,6 +240,8 @@ namespace Mini_Keyboard
         {
             if (modePrediction == false)
             {
+                buttonPresssed[1] = true;
+
                 globalListBox.Items.Clear();
                 for (int i = 0; i < listBox1.Items.Count; i++)
                 {
@@ -252,6 +268,8 @@ namespace Mini_Keyboard
         {
             if (modePrediction == false)
             {
+                buttonPresssed[2] = true;
+
                 globalListBox.Items.Clear();
                 for (int i = 0; i < listBox2.Items.Count; i++)
                 {
@@ -278,6 +296,8 @@ namespace Mini_Keyboard
         {
             if (modePrediction == false)
             {
+                buttonPresssed[3] = true;
+
                 globalListBox.Items.Clear();
                 for (int i = 0; i < listBox3.Items.Count; i++)
                 {
@@ -304,6 +324,8 @@ namespace Mini_Keyboard
         {
             if (modePrediction == false)
             {
+                buttonPresssed[7] = true;
+
                 globalListBox.Items.Clear();
                 for (int i = 0; i < listBox7.Items.Count; i++)
                 {
@@ -330,6 +352,8 @@ namespace Mini_Keyboard
         {
             if (modePrediction == false)
             {
+                buttonPresssed[10] = true;
+
                 globalListBox.Items.Clear();
                 for (int i = 0; i < listBox10.Items.Count; i++)
                 {
@@ -356,6 +380,8 @@ namespace Mini_Keyboard
         {
             if (modePrediction == false)
             {
+                buttonPresssed[11] = true;
+
                 globalListBox.Items.Clear();
                 for (int i = 0; i < listBox11.Items.Count; i++)
                 {
@@ -468,7 +494,7 @@ namespace Mini_Keyboard
             if(notepadTxt.Text != "")
             {
                 sfd.Filter = "Text File|*.txt";
-                //If save is clicked
+                //Will only run if save is clicked
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
                     //Makes sure the file name isn't left blank
@@ -480,10 +506,11 @@ namespace Mini_Keyboard
                             sw.Write(notepadTxt.Text);
                         }
                     }
-                }
-                //Clears the notepad and wordbuiler text boxes
-                notepadTxt.Clear();
-                wordBuilderTextBox.Clear();
+
+                    //Clears the notepad and wordbuiler text boxes
+                    notepadTxt.Clear();
+                    wordBuilderTextBox.Clear();
+                }                
             }
         }
 
