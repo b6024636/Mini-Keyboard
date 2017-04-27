@@ -207,12 +207,14 @@
             // 
             // button0
             // 
+            this.button0.BackColor = System.Drawing.Color.Lime;
+            this.button0.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button0.Location = new System.Drawing.Point(331, 522);
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(53, 48);
             this.button0.TabIndex = 12;
             this.button0.Text = "000\r\n[ _ ]";
-            this.button0.UseVisualStyleBackColor = true;
+            this.button0.UseVisualStyleBackColor = false;
             this.button0.Click += new System.EventHandler(this.button0_Click);
             // 
             // button10
@@ -239,68 +241,74 @@
             // 
             // prevButton
             // 
+            this.prevButton.BackColor = System.Drawing.Color.LightSkyBlue;
             this.prevButton.Location = new System.Drawing.Point(390, 306);
             this.prevButton.Name = "prevButton";
             this.prevButton.Size = new System.Drawing.Size(53, 48);
             this.prevButton.TabIndex = 15;
             this.prevButton.Text = "Previ-\r\nous";
-            this.prevButton.UseVisualStyleBackColor = true;
+            this.prevButton.UseVisualStyleBackColor = false;
             // 
             // button13
             // 
+            this.button13.BackColor = System.Drawing.Color.Yellow;
             this.button13.Location = new System.Drawing.Point(449, 306);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(53, 48);
             this.button13.TabIndex = 16;
             this.button13.Text = "Show\r\nPred-\r\niction";
-            this.button13.UseVisualStyleBackColor = true;
+            this.button13.UseVisualStyleBackColor = false;
             // 
             // buttonMode
             // 
+            this.buttonMode.BackColor = System.Drawing.Color.LightSkyBlue;
             this.buttonMode.Location = new System.Drawing.Point(272, 306);
             this.buttonMode.Name = "buttonMode";
             this.buttonMode.Size = new System.Drawing.Size(53, 48);
             this.buttonMode.TabIndex = 17;
             this.buttonMode.Text = "Mode";
-            this.buttonMode.UseVisualStyleBackColor = true;
+            this.buttonMode.UseVisualStyleBackColor = false;
             this.buttonMode.Click += new System.EventHandler(this.buttonMode_Click);
             // 
             // nextButton
             // 
+            this.nextButton.BackColor = System.Drawing.Color.LightSkyBlue;
             this.nextButton.Location = new System.Drawing.Point(331, 306);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(53, 48);
             this.nextButton.TabIndex = 18;
             this.nextButton.Text = "Next";
-            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.UseVisualStyleBackColor = false;
             // 
             // button14
             // 
+            this.button14.BackColor = System.Drawing.Color.Yellow;
             this.button14.Location = new System.Drawing.Point(449, 414);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(53, 48);
             this.button14.TabIndex = 19;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
+            this.button14.UseVisualStyleBackColor = false;
             // 
             // button16
             // 
+            this.button16.BackColor = System.Drawing.Color.Yellow;
             this.button16.Location = new System.Drawing.Point(449, 360);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(53, 48);
             this.button16.TabIndex = 20;
             this.button16.Text = "Delete\r\nWord Builder";
-            this.button16.UseVisualStyleBackColor = true;
+            this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // enterButton
             // 
+            this.enterButton.BackColor = System.Drawing.Color.Yellow;
             this.enterButton.Location = new System.Drawing.Point(449, 468);
             this.enterButton.Name = "enterButton";
             this.enterButton.Size = new System.Drawing.Size(53, 102);
             this.enterButton.TabIndex = 21;
             this.enterButton.Text = "Enter";
-            this.enterButton.UseVisualStyleBackColor = true;
+            this.enterButton.UseVisualStyleBackColor = false;
             this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
             // timer1
@@ -517,50 +525,50 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(111, 6);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(111, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
