@@ -531,19 +531,17 @@ namespace Mini_Keyboard
 
         private void loadDictionary()
         {
-
+            string filePath = Directory.GetCurrentDirectory() + "\\";
+           
+            StreamWriter outputStream = File.CreateText(filePath + "Dictionary.txt");
+            outputStream.Close();
+               
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Setup the time Between Presses for Next Character when same button withinTimer.Interval = intIntervalRequired;  
-            for (int whichButton = 0; whichButton <= 18; whichButton++)
-            {
-                buttonPresssed[whichButton] = false;
-            }
-
-             loadDictionary(); 
-
+           loadDictionary(); 
         }
 
 
