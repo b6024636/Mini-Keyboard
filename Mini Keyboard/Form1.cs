@@ -24,13 +24,14 @@ namespace Mini_Keyboard
         int intervalRequired = 1000;
 
         bool requiresSaving = false;
+
         // Buttons. Identifies which button is being selected be the user. 
         bool[] buttonPresssed = new bool[19];
 
         string builtWord;
+
         //Adds variables for opening and saving file dialog
         OpenFileDialog ofd = new OpenFileDialog();
-
         SaveFileDialog sfd = new SaveFileDialog();
 
         public Form1()
@@ -491,26 +492,31 @@ namespace Mini_Keyboard
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(notepadTxt.Text != "")
+            if (requiresSaving == true)
             {
-                sfd.Filter = "Text File|*.txt";
-                //Will only run if save is clicked
-                if (sfd.ShowDialog() == DialogResult.OK)
+                if (notepadTxt.Text != "")
                 {
-                    //Makes sure the file name isn't left blank
-                    if (sfd.FileName != "")
+                    sfd.Filter = "Text File|*.txt";
+                    if (sfd.ShowDialog() == DialogResult.OK)
                     {
-                        //Writes the text in the notepad to a file
-                        using (StreamWriter sw = new StreamWriter(sfd.FileName))
+                        if (sfd.FileName != "")
                         {
-                            sw.Write(notepadTxt.Text);
+                           using (StreamWriter sw = new StreamWriter(sfd.FileName))
+                            {
+                                sw.Write(notepadTxt.Text);
+                            }
                         }
-                    }
 
-                    //Clears the notepad and wordbuiler text boxes
-                    notepadTxt.Clear();
-                    wordBuilderTextBox.Clear();
-                }                
+                        //Clears the notepad and wordbuiler text boxes
+                        notepadTxt.Clear();
+                        wordBuilderTextBox.Clear();
+                    }
+                }
+            }
+            else
+            {
+                notepadTxt.Clear();
+                wordBuilderTextBox.Clear();
             }
         }
 
