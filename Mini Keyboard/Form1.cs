@@ -384,7 +384,7 @@ namespace Mini_Keyboard
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sfd.Filter = "Text File|*.txt";
+            sfd.Filter = "Text File |*.txt";
             //If save is clicked
             if (sfd.ShowDialog() == DialogResult.OK)
             { 
@@ -402,11 +402,21 @@ namespace Mini_Keyboard
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            string fileDialog;
+            //Checks if there is already a file name for the current file
+            if(sfd.FileName != null)
+            {
+                fileDialog = sfd.FileName;
+            }
+            else
+            {
+                fileDialog = "File Dialog";
+            }
             // This gets us the location where the Application is being
             string applicationPath = Directory.GetCurrentDirectory() + "\\";
 
             // Creates a file at the application path called Notepad.txt
-            StreamWriter outputStream = File.CreateText(applicationPath + "Notepad.txt");
+            StreamWriter outputStream = File.CreateText(applicationPath + fileDialog);
             outputStream.WriteLine(notepadTxt.Text);
 
             //Closes the file
