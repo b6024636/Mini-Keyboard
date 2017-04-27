@@ -81,6 +81,12 @@ namespace Mini_Keyboard
             wordBuilderTextBox.Clear();
             //This means that the file has been edited and therefore needs to be saved
             requiresSaving = true;
+
+            string applicationPath = Directory.GetCurrentDirectory() + "\\";
+            
+            StreamWriter outputStream = File.CreateText(applicationPath + "Dictionary.txt");
+            outputStream.WriteLine(wordBuilderTextBox.Text);
+            outputStream.Close();
         }
 
         private void timerRestart()
@@ -531,11 +537,12 @@ namespace Mini_Keyboard
 
         private void loadDictionary()
         {
+
             string filePath = Directory.GetCurrentDirectory() + "\\";
-            
+            //If the Dictionary.txt file doesnt exist, make one
             if(File.Exists(filePath + "Dictionary.txt"))
             {
-              
+              //File exists
             }
             else
             {
@@ -550,7 +557,7 @@ namespace Mini_Keyboard
            loadDictionary(); 
         }
 
-
+        
 
 
 
