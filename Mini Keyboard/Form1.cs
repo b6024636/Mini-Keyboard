@@ -36,9 +36,7 @@ namespace Mini_Keyboard
 
         public Form1()
         {
-            InitializeComponent();
-
-            
+            InitializeComponent();            
         }
 
         private void buttonMode_Click(object sender, EventArgs e)
