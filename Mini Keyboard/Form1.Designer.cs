@@ -76,6 +76,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBoxLetterLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -320,9 +321,9 @@
             // globalListBox
             // 
             this.globalListBox.FormattingEnabled = true;
-            this.globalListBox.Location = new System.Drawing.Point(36, 287);
+            this.globalListBox.Location = new System.Drawing.Point(805, 196);
             this.globalListBox.Name = "globalListBox";
-            this.globalListBox.Size = new System.Drawing.Size(82, 108);
+            this.globalListBox.Size = new System.Drawing.Size(34, 17);
             this.globalListBox.TabIndex = 22;
             // 
             // listBox8
@@ -336,7 +337,7 @@
             "A",
             "B",
             "C"});
-            this.listBox8.Location = new System.Drawing.Point(537, 308);
+            this.listBox8.Location = new System.Drawing.Point(793, 186);
             this.listBox8.Name = "listBox8";
             this.listBox8.Size = new System.Drawing.Size(52, 30);
             this.listBox8.TabIndex = 23;
@@ -352,7 +353,7 @@
             "D",
             "E",
             "F"});
-            this.listBox9.Location = new System.Drawing.Point(539, 308);
+            this.listBox9.Location = new System.Drawing.Point(795, 186);
             this.listBox9.Name = "listBox9";
             this.listBox9.Size = new System.Drawing.Size(51, 17);
             this.listBox9.TabIndex = 24;
@@ -368,7 +369,7 @@
             "G",
             "H",
             "I"});
-            this.listBox4.Location = new System.Drawing.Point(537, 318);
+            this.listBox4.Location = new System.Drawing.Point(793, 196);
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(36, 17);
             this.listBox4.TabIndex = 25;
@@ -384,7 +385,7 @@
             "J",
             "K",
             "L"});
-            this.listBox5.Location = new System.Drawing.Point(539, 318);
+            this.listBox5.Location = new System.Drawing.Point(795, 196);
             this.listBox5.Name = "listBox5";
             this.listBox5.Size = new System.Drawing.Size(34, 17);
             this.listBox5.TabIndex = 26;
@@ -400,7 +401,7 @@
             "M",
             "N",
             "O"});
-            this.listBox6.Location = new System.Drawing.Point(541, 318);
+            this.listBox6.Location = new System.Drawing.Point(797, 196);
             this.listBox6.Name = "listBox6";
             this.listBox6.Size = new System.Drawing.Size(32, 17);
             this.listBox6.TabIndex = 27;
@@ -418,7 +419,7 @@
             "Q",
             "R",
             "S"});
-            this.listBox1.Location = new System.Drawing.Point(541, 308);
+            this.listBox1.Location = new System.Drawing.Point(797, 186);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(39, 17);
             this.listBox1.TabIndex = 28;
@@ -434,7 +435,7 @@
             "T",
             "U",
             "V"});
-            this.listBox2.Location = new System.Drawing.Point(542, 318);
+            this.listBox2.Location = new System.Drawing.Point(798, 196);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(38, 17);
             this.listBox2.TabIndex = 29;
@@ -452,7 +453,7 @@
             "X",
             "Y",
             "Z"});
-            this.listBox3.Location = new System.Drawing.Point(557, 321);
+            this.listBox3.Location = new System.Drawing.Point(813, 199);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(10, 4);
             this.listBox3.TabIndex = 30;
@@ -468,7 +469,7 @@
             "\'",
             ":",
             ";"});
-            this.listBox7.Location = new System.Drawing.Point(541, 318);
+            this.listBox7.Location = new System.Drawing.Point(797, 196);
             this.listBox7.Name = "listBox7";
             this.listBox7.Size = new System.Drawing.Size(48, 17);
             this.listBox7.TabIndex = 31;
@@ -480,7 +481,7 @@
             "*",
             "-",
             "_"});
-            this.listBox10.Location = new System.Drawing.Point(549, 317);
+            this.listBox10.Location = new System.Drawing.Point(805, 195);
             this.listBox10.Name = "listBox10";
             this.listBox10.Size = new System.Drawing.Size(39, 17);
             this.listBox10.TabIndex = 32;
@@ -492,7 +493,7 @@
             "#",
             "-",
             "_"});
-            this.listBox11.Location = new System.Drawing.Point(539, 317);
+            this.listBox11.Location = new System.Drawing.Point(795, 195);
             this.listBox11.Name = "listBox11";
             this.listBox11.Size = new System.Drawing.Size(52, 17);
             this.listBox11.TabIndex = 33;
@@ -583,16 +584,26 @@
             // listBoxLetterLbl
             // 
             this.listBoxLetterLbl.AutoSize = true;
-            this.listBoxLetterLbl.Location = new System.Drawing.Point(83, 540);
+            this.listBoxLetterLbl.Location = new System.Drawing.Point(120, 513);
             this.listBoxLetterLbl.Name = "listBoxLetterLbl";
             this.listBoxLetterLbl.Size = new System.Drawing.Size(0, 13);
             this.listBoxLetterLbl.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(85, 486);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Current Letter";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 591);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.listBoxLetterLbl);
             this.Controls.Add(this.listBox11);
             this.Controls.Add(this.listBox10);
@@ -691,6 +702,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configureToolStripMenuItem;
         private System.Windows.Forms.Label listBoxLetterLbl;
+        private System.Windows.Forms.Label label1;
     }
 }
 

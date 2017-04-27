@@ -82,11 +82,13 @@ namespace Mini_Keyboard
             //This means that the file has been edited and therefore needs to be saved
             requiresSaving = true;
 
+            //Adds the word builder text to the dictionary
             string applicationPath = Directory.GetCurrentDirectory() + "\\";
             
-            StreamWriter outputStream = File.CreateText(applicationPath + "Dictionary.txt");
-            outputStream.WriteLine(wordBuilderTextBox.Text);
-            outputStream.Close();
+           using (System.IO.StreamWriter file = new System.IO.StreamWriter(applicationPath + "Dictionary.txt"))
+           {
+               file.WriteLine(wordBuilderTextBox.Text);
+           }
         }
 
         private void timerRestart()
@@ -554,7 +556,8 @@ namespace Mini_Keyboard
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           loadDictionary(); 
+           loadDictionary();
+           notepadTxt.BringToFront();
         }
 
         
